@@ -1,0 +1,149 @@
+/* Reset margin and padding for body */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* App Container */
+.app-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 20px;  Reduced top padding */
+    box-sizing: border-box;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 10px;  /* Padding for navbar */
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dbd5d5;
+    margin: 0;  /* Ensure no margin is added to navbar */
+    box-sizing: border-box;  /* Ensure padding and border don't add extra space */
+}
+
+.navbar-title {
+    margin: 0;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: #00bcd4;
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.main-content {
+    width: 480px;
+    max-width: 800px;  /* Reduced max-width */
+    padding: 30px;  /* Reduced padding */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.main-content h2 {
+    color: #00bcd4;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Language Selection Styles */
+.language-selection {
+    width: 100%;
+    margin-bottom: 15px;  /* Reduced margin-bottom */
+}
+
+.select {
+    width: 100%;
+    padding: 12px;  /* Reduced padding */
+    margin: 8px 0;  /* Reduced margin */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease-in-out;
+}
+
+.select:hover {
+    background-color: #f0f0f0;
+    border-color: #00bcd4;
+    box-shadow: 0px 0px 10px rgba(0, 188, 212, 0.2);
+}
+
+/* Record Buttons Styling */
+.record-buttons {
+    margin: 15px 0;  /* Reduced margin */
+}
+
+.button {
+    width: 100%;
+    padding: 12px;  /* Reduced padding */
+    font-size: 16px;  /* Reduced font size */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 188, 212, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 188, 212, 0.2);
+}
+
+/* Result Text Styling */
+.result-text {
+    margin-top: 20px;  /* Reduced margin */
+    text-align: left;
+    font-size: 18px;
+}
+
+.result-text .bold-text {
+    font-weight: bold;
+}
+
+.result-text audio {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General Text Styling */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+}
