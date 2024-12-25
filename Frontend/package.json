@@ -24,11 +24,11 @@
     "webpack": "^5.97.1"
   },
   "scripts": {
-    "prebuild": "npm install --legacy-peer-deps",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "npm install --force"
   },
   "browserslist": [
     ">0.2%",
