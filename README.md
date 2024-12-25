@@ -66,11 +66,12 @@ Here’s a glimpse of the application interface:
 
 ---
 
-## 🚀 **Future Enhancements (Bonus Points)**
+## 🚀 **Future Enhancements**
 
 - **Offline functionality** for STT & TTS 📴.
 - Option to **save/export translated conversations** 💾.
 - **Integration with messaging/video platforms** 📱💬.
+- **Deployment on Vercel** for cloud hosting 🌐.
 
 ---
 
@@ -136,6 +137,6 @@ A demo showcasing the core features will be available soon! 🎬
 
 ## 📧 **Contact**
 
-For further inquiries, reach out to me at **Shubham Murtadak (AI Engineer)** 📩.
+For further inquiries, reach out to me at **Shubham Murtadak** 📩.
 
 ---
