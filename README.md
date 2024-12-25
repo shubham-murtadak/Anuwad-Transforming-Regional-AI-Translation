@@ -80,10 +80,62 @@ A demo showcasing the core features will be available soon! 🎬
 
 ---
 
+
+---
+
+## **Status**
+
+### **Implemented:**
+1. **Real-Time Speech Recognition**:
+   - Speech-to-Text (STT) implemented.
+   - Supports multiple Indian languages (Hindi, Kannada, Marathi, etc.).
+
+2. **Language Translation**:
+   - Text is translated from mentor’s language to the user’s native language.
+   - Translation is handled using IndicTrans2 models.
+
+3. **Text-to-Speech (TTS)**:
+   - Converts translated text to speech using Google TTS.
+   - Multiple voice options for natural output.
+
+4. **Bidirectional Communication**:
+   - Users can communicate in both languages (mentor & user).
+   - Toggle feature to switch between languages seamlessly.
+
+5. **Language Selection**:
+   - Language selection dropdown for users to choose their preferred language.
+   - Automatic language detection feature enabled.
+
+6. **User Interface (UI)**:
+   - Simple, intuitive interface with visual cues for real-time translation and speech status.
+   - Optimized for accessibility (large fonts, screen reader compatible).
+
+7. **Backend & Frontend**:
+   - Backend implemented using Flask.
+   - Frontend developed using React.js.
+
+8. **Authentication Pages**:
+   - Firebase Authentication pages completed.
+
+---
+
+## **Remaining Tasks(get completed tonight)**:
+1. **IndicTrans2 Model Integration**:
+   - Full integration of the IndicTrans2 translation model (currently being worked on).
+
+2. **Security & Privacy**:
+   - Implement data encryption for secure transmission.
+   - Ensure no sensitive data storage (currently pending).
+
+3. **Integration of Authentication Pages**:
+   - Complete integration with Firebase Authentication (remaining).
+
+---
+
+
+
 ## 📧 **Contact**
 
 For further inquiries, reach out to me at **Shubham Murtadak (AI Engineer)** 📩.
 
 ---
-
-Thank you for exploring **Anuwad**! 🙌

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'; // Assuming your CSS is in App.css for styling
+import './app.css'; // Assuming your CSS is in App.css for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowsAltH } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // Import axios for API requests
