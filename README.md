@@ -115,7 +115,7 @@ A demo showcasing the core features will be available soon! 🎬
    - Frontend developed using React.js.
 
 8. **Authentication Pages**:
-   - Firebase Authentication pages completed.
+   - Firebase project created & Authentication pages completed 
 
 ---
 
@@ -128,7 +128,7 @@ A demo showcasing the core features will be available soon! 🎬
    - Ensure no sensitive data storage (currently pending).
 
 3. **Integration of Authentication Pages**:
-   - Complete integration with Firebase Authentication (remaining).
+   - Complete integration Of Authnetication pages with main module remainin( Routing remaining only) 
 
 ---
 
