@@ -6,3 +6,8 @@ pyaudio
 indic-nlp-library
 flask-cors==5.0.0
 python-dotenv==1.0.1
+
+#new
+langchain
+langchain-google-genai
+pygame

@@ -1,149 +1,246 @@
-/* Reset margin and padding for body */
-body, html {
+/* General Styles */
+body {
     margin: 0;
-    padding: 0;
-}
-
-/* App Container */
-.app-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding-top: 20px;  Reduced top padding */
-    box-sizing: border-box;
-}
-
-
-/* Navbar Styling */
-.navbar {
-    background-color: #333;
-    width: 100%;
-    padding: 10px 10px;  /* Padding for navbar */
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+  }
+  
+  h1 {
     text-align: center;
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
+    margin-top: 20px;
+    font-size: 2.2em;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #dbd5d5;
-    margin: 0;  /* Ensure no margin is added to navbar */
-    box-sizing: border-box;  /* Ensure padding and border don't add extra space */
-}
-
-.navbar-title {
-    margin: 0;
-}
-
-.navbar-links {
-    display: flex;
-    gap: 25px;
-}
-
-.navbar-link {
+    background-color: #333; /* Dark color for navbar */
     color: white;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.navbar-link:hover {
-    color: #00bcd4;
-    text-decoration: underline;
-}
-
-/* Main Content Styling */
-.main-content {
-    width: 480px;
-    max-width: 800px;  /* Reduced max-width */
-    padding: 30px;  /* Reduced padding */
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    padding: 5px 5px;
     text-align: center;
-}
-
-.main-content h2 {
-    color: #00bcd4;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-/* Language Selection Styles */
-.language-selection {
-    width: 100%;
-    margin-bottom: 15px;  /* Reduced margin-bottom */
-}
-
-.select {
-    width: 100%;
-    padding: 12px;  /* Reduced padding */
-    margin: 8px 0;  /* Reduced margin */
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    background-color: #f7f7f7;
-    transition: all 0.3s ease-in-out;
-}
-
-.select:hover {
-    background-color: #f0f0f0;
-    border-color: #00bcd4;
-    box-shadow: 0px 0px 10px rgba(0, 188, 212, 0.2);
-}
-
-/* Record Buttons Styling */
-.record-buttons {
-    margin: 15px 0;  /* Reduced margin */
-}
-
-.button {
-    width: 100%;
-    padding: 12px;  /* Reduced padding */
-    font-size: 16px;  /* Reduced font size */
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 188, 212, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 188, 212, 0.2);
-}
-
-/* Result Text Styling */
-.result-text {
-    margin-top: 20px;  /* Reduced margin */
-    text-align: left;
-    font-size: 18px;
-}
-
-.result-text .bold-text {
+    font-size: 32px;
     font-weight: bold;
-}
-
-.result-text audio {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* General Text Styling */
-h1, h2, h3, h4, h5, h6, p {
-    margin: 10px 0;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
+    border-bottom: 1px solid #dbd5d5;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .navbar span {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-links a {
     color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    margin-top: 50px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar-links a:hover {
+    color: #ffa726; /* Accent color for hover */
+  }
+  
+  /* Partition */
+  .partition {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 10px;
+    gap: 20px;
     position: relative;
-}
+  }
+  
+  .section {
+    width: 45%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .section.listening {
+    border: 2px solid #42f2f5; /* Accent color for listening section */
+    transform: scale(1.02);
+  }
+  
+  .section img {
+    width: 120px;
+    height: 120px;
+    margin: 10px 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0078d7; /* Accent color for image border */
+  }
+  
+  .section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .section label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .section select {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .section button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #1ff2f2; /* Accent color for buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .section button:hover {
+    background-color: #0078d7; /* Darker shade of accent color */
+  }
+  
+  .section textarea {
+    width: 90%;
+    height: 80px;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Audio Player */
+  .audio-player {
+    /* margin: 10px 0; */
+    padding: 0px; /* Increased padding for more space */
+    background-color: #ffd54f;
+    /* background-color: #ffd54f; */
+    color: #333;
+    font-weight: bold;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center; /* Center the content (audio player) */
+    align-items: center;
+    min-height: 20px;
+  }
+  
+  .audio-player button {
+    /* margin: 10px 0; */
+    /* padding: 8px 8px; Reduced padding for smaller button */
+    background-color: #ffd54f; /* Same yellow color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .audio-player button:hover {
+    background-color: #ffb300; /* Slightly darker yellow shade on hover */
+  }
+  
+  .audio-player .audio-btn {
+    color: black; /* Text color set to black */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Adjust font size */
+    background-color: #ffd54f; /* Yellow background */
+    border: none;
+    padding: 4px 4px; /* Adjust padding for smaller button */
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .audio-player .audio-btn:hover {
+    background-color: #ffb300; /* Slightly darker yellow shade on hover */
+  }
+  
+  /* Status */
+  .status {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #0078d7; /* Primary color for status */
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    background-color: #333; /* Dark color for footer */
+    color: white;
+    padding: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  /* Center Toggle Role Button */
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Toggle Role Button */
+  .toggle-role-btn {
+    background-color: #ffa500; /* Orange color for button */
+    border: none;
+    width: 100px;
+    height: 100px;
+    padding: 4px 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 80%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toggle-role-btn:hover {
+    background-color: #00bad7; /* Darker shade for hover effect */
+  }
+  
+  /* Hover Effect for Sections */
+  .section.listening {
+    border-color: #42f2f5; /* Highlight section during listening */
+    transform: scale(1.05); /* Slightly enlarge section during recording */
+  }
+  
