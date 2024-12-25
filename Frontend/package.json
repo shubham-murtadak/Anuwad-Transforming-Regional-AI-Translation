@@ -24,7 +24,7 @@
     "webpack": "^5.97.1"
   },
   "scripts": {
-    "prebuild": "npm install --legacy-peer-deps",  // Added prebuild step
+    "prebuild": "npm install --legacy-peer-deps",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
