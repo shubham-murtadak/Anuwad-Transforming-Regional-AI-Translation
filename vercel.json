@@ -3,7 +3,10 @@
   "builds": [
     {
       "src": "Frontend/package.json",
-      "use": "@vercel/react"
+      "use": "@vercel/react",
+      "config": {
+        "buildCommand": "npm ci --force && npm run build"
+      }
     },
     {
       "src": "Backend/app.py",
