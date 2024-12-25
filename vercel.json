@@ -5,7 +5,7 @@
       "src": "Frontend/package.json",
       "use": "@vercel/react",
       "config": {
-        "buildCommand": "npm ci --force && npm run build"
+        "installCommand": "npm ci --force && npm run build"
       }
     },
     {
