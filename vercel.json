@@ -4,9 +4,7 @@
     {
       "src": "Frontend/package.json",
       "use": "@vercel/react",
-      "config": {
-        "buildCommand": "npm install --force && npm run build"
-      }
+      "buildCommand": "npm install --legacy-peer-deps"
     },
     {
       "src": "Backend/app.py",
