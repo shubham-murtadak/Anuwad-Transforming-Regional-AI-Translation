@@ -12,7 +12,7 @@ import pygame
 pygame.mixer.init()
 
 # Initialize the LLM with Google API key
-llm = ChatGoogleGenerativeAI(model='gemini-1.5-pro', google_api_key='AIzaSyDsOMnJfad6qBsNe-gJ4YH7gWtzbyl0DTg')
+llm = ChatGoogleGenerativeAI(model='gemini-1.5-pro', google_api_key='')
 
 def generate_response(query):
     return llm.invoke(query).content
