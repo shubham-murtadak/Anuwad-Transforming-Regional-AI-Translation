@@ -71,13 +71,12 @@ Here’s a glimpse of the application interface:
 - **Offline functionality** for STT & TTS 📴.
 - Option to **save/export translated conversations** 💾.
 - **Integration with messaging/video platforms** 📱💬.
-- **Deployment on Vercel** for cloud hosting 🌐.
 
 ---
 
-## 🎥 **Demo**
+## 🎥 **Deployed link of Anuwad **
 
-A demo showcasing the core features will be available soon! 🎬
+[click here]! 🎬](https://anuwad-transforming-regional-ai-translation-p5v1pt5hm.vercel.app/)
 
 ---
 
