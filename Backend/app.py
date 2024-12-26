@@ -15,10 +15,11 @@ from Source.log import logging
 # Load environment variables
 load_dotenv()
 
-PROJECT_HOME_PATH=os.getenv('PROJECT_HOME_PATH')
+# Use /tmp directory for Vercel deployment
+PROJECT_HOME_PATH = "/tmp"  # Vercel serverless environment
 
-# os.makedirs(os.path.join(PROJECT_HOME_PATH, 'Data'),exist_ok=True)
-os.makedirs(os.path.join(PROJECT_HOME_PATH, 'static'),exist_ok=True)
+# Ensure necessary directories exist in /tmp
+os.makedirs(os.path.join(PROJECT_HOME_PATH, 'static'), exist_ok=True)
 
 app = Flask(__name__, static_folder=os.path.join(PROJECT_HOME_PATH, 'static'))
 
@@ -53,9 +54,8 @@ def record_audio():
 def start_recording():
     logging.info("inside start recording function !!")
     # print("inside start recording function !!")
-    data = request.get_json()
-    print("Request JSON data:", data)
 
+    data = request.get_json()
     input_language = data.get('inputLanguage', '')
     output_language = data.get('outputLanguage', '')
 
@@ -73,9 +73,9 @@ def start_recording():
 
     logging.info("Recording end !")
     # print("Recording end !")
+    threading.Thread(target=record_audio).start()
 
     return jsonify({"status": "Recording started", "inputLanguage": input_language, "outputLanguage": output_language})
-
 
 # API endpoint to stop recording and process audio
 @app.route("/stop_recording", methods=["POST"])
@@ -84,6 +84,7 @@ def stop_recording():
     # print("inside stop recording function !!")
     logging.info("Request JSON data:", request.get_json())
     # print("Request JSON data:", request.get_json())
+
     global RECORDING, FRAMES, stream, p
     if not RECORDING:
         return jsonify({"status": "Error", "message": "No recording is in progress"})
@@ -91,7 +92,7 @@ def stop_recording():
     RECORDING = False
 
     # Save recorded audio to a temporary file
-    recorded_audio_file_name =f"{uuid.uuid4().hex}.wav"
+    recorded_audio_file_name = f"{uuid.uuid4().hex}.wav"
     recorded_audio_file_path = os.path.join(PROJECT_HOME_PATH, 'static', recorded_audio_file_name)
     wf = wave.open(recorded_audio_file_path, "wb")
     wf.setnchannels(CHANNELS)
@@ -103,7 +104,6 @@ def stop_recording():
     # Get language preferences from the user
     input_language = request.json.get("inputLanguage", "en-US")  # Default to English
     output_language = request.json.get("outputLanguage", "en")  # Default to English
-
 
     logging.info("input_langugae receive :",input_language)
     # print("input_langugae receive :",input_language)
@@ -121,7 +121,6 @@ def stop_recording():
         audio = recognizer.record(source)
 
     try:
-        # Recognizing speech with the specified input language
         input_text = recognizer.recognize_google(audio, language=input_language)
     except sr.UnknownValueError:
         return jsonify({"status": "Error", "message": "Could not understand audio"})
@@ -130,6 +129,7 @@ def stop_recording():
 
     if not input_text:
         return jsonify({"status": "Error", "message": "No speech detected"})
+
     
     logging.info("Input text is :",input_text)
     # print("Input text is :",input_text)
@@ -156,9 +156,8 @@ def stop_recording():
 
 
     # Generate unique filename for the translated audio
-    translated_audio_folder_path = os.path.join(PROJECT_HOME_PATH, 'static')
     translated_audio_file_name = f"{uuid.uuid4().hex}.mp3"
-    translated_audio_file_path = os.path.join(translated_audio_folder_path, translated_audio_file_name)
+    translated_audio_file_path = os.path.join(PROJECT_HOME_PATH, 'static', translated_audio_file_name)
 
     logging.info("Translated text is :",translated_text)
     # print("Translated text is :",translated_text)
@@ -166,29 +165,21 @@ def stop_recording():
     tts = gTTS(translated_text, lang=output_language)
     tts.save(translated_audio_file_path)
 
-    # Clean up temporary files
-    # os.remove(temp_file_path)
-
     # Reset PyAudio and Stream to allow for next recording
     stream.close()
     p.terminate()
 
-    # Send the new audio URL back in the response
-    translated_audio_url = f"http://localhost:5000/static/{translated_audio_file_name}"
-    recorded_file_url=f"http://localhost:5000/static/{recorded_audio_file_name}"
-
-
-
-    print(translated_audio_url)
-    print(recorded_file_url)
+    # Send the new audio URL back in the response (relative URLs, Vercel handles the rest)
+    translated_audio_url = f"/static/{translated_audio_file_name}"
+    recorded_file_url = f"/static/{recorded_audio_file_name}"
 
     return jsonify({
         "status": "Recording stopped",
-        "input_audio_url":recorded_file_url,
+        "input_audio_url": recorded_file_url,
         "translated_audio_url": translated_audio_url,
         "original_text": input_text,
         "translated_text": translated_text
     })
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# Remove the Flask `app.run()` line since Vercel automatically handles this
+
