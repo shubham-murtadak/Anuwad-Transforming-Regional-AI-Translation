@@ -13,10 +13,15 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-PROJECT_HOME_PATH=os.getenv('PROJECT_HOME_PATH')
+# PROJECT_HOME_PATH=os.getenv('PROJECT_HOME_PATH')
 
-# os.makedirs(os.path.join(PROJECT_HOME_PATH, 'Data'),exist_ok=True)
-os.makedirs(os.path.join(PROJECT_HOME_PATH, 'static'),exist_ok=True)
+# # os.makedirs(os.path.join(PROJECT_HOME_PATH, 'Data'),exist_ok=True)
+# os.makedirs(os.path.join(PROJECT_HOME_PATH, 'static'),exist_ok=True)
+
+PROJECT_HOME_PATH = "/tmp/project_home_path"  # Use a fixed path like `/tmp` for Vercel or another known directory
+
+# Ensure necessary directories exist
+os.makedirs(os.path.join(PROJECT_HOME_PATH, 'static'), exist_ok=True)
 
 app = Flask(__name__, static_folder=os.path.join(PROJECT_HOME_PATH, 'static'))
 
