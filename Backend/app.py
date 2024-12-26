@@ -9,6 +9,8 @@ import speech_recognition as sr
 from googletrans import Translator
 import uuid
 from dotenv import load_dotenv
+from Source.indic import translate_text_indic
+from Source.log import logging
 
 # Load environment variables
 load_dotenv()
@@ -34,7 +36,8 @@ p = None
 
 # Thread function for recording audio
 def record_audio():
-    print("inside record audio function !!!")
+    logging.info("inside record audio function !!!")
+    # print("inside record audio function !!!")
     global FRAMES, RECORDING, stream, p
     p = pyaudio.PyAudio()
     stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
@@ -48,23 +51,28 @@ def record_audio():
 # API endpoint to start recording
 @app.route("/start_recording", methods=["POST"])
 def start_recording():
-    print("inside start recording function !!")
+    logging.info("inside start recording function !!")
+    # print("inside start recording function !!")
     data = request.get_json()
     print("Request JSON data:", data)
 
     input_language = data.get('inputLanguage', '')
     output_language = data.get('outputLanguage', '')
 
-    print(f"Input Language: {input_language}, Output Language: {output_language}")
+    logging.info(f"Input Language: {input_language}, Output Language: {output_language}")
+    # print(f"Input Language: {input_language}, Output Language: {output_language}")
     
     global RECORDING
     if RECORDING:
         return jsonify({"status": "Already recording. Please stop the current recording first."})
 
     RECORDING = True
-    print("Recording start :")
+    logging.info("Recording start :")
+    # print("Recording start :")
     threading.Thread(target=record_audio).start()
-    print("Recording end !")
+
+    logging.info("Recording end !")
+    # print("Recording end !")
 
     return jsonify({"status": "Recording started", "inputLanguage": input_language, "outputLanguage": output_language})
 
@@ -72,8 +80,10 @@ def start_recording():
 # API endpoint to stop recording and process audio
 @app.route("/stop_recording", methods=["POST"])
 def stop_recording():
-    print("inside stop recording function !!")
-    print("Request JSON data:", request.get_json())
+    logging.info("inside stop recording function !!")
+    # print("inside stop recording function !!")
+    logging.info("Request JSON data:", request.get_json())
+    # print("Request JSON data:", request.get_json())
     global RECORDING, FRAMES, stream, p
     if not RECORDING:
         return jsonify({"status": "Error", "message": "No recording is in progress"})
@@ -94,8 +104,11 @@ def stop_recording():
     input_language = request.json.get("inputLanguage", "en-US")  # Default to English
     output_language = request.json.get("outputLanguage", "en")  # Default to English
 
-    print("input_langugae receive :",input_language)
-    print("output language receive :",output_language)
+
+    logging.info("input_langugae receive :",input_language)
+    # print("input_langugae receive :",input_language)
+    logging.info("output language receive :",output_language)
+    # print("output language receive :",output_language)
 
 
     # Ensure language codes are in correct format (e.g., 'hi-IN' -> 'hi')
@@ -118,26 +131,37 @@ def stop_recording():
     if not input_text:
         return jsonify({"status": "Error", "message": "No speech detected"})
     
-    print("Input text is :",input_text)
+    logging.info("Input text is :",input_text)
+    # print("Input text is :",input_text)
 
-    # Translation
-    translator = Translator()
-    try:
-        if input_language == 'en' and output_language != "en":
-            translated_text = translator.translate(input_text, src='en', dest=output_language).text
-        elif output_language == 'en' and input_language != "en":
-            translated_text = translator.translate(input_text, src=input_language, dest='en').text
-        else:
-            translated_text = translator.translate(input_text, src=input_language, dest=output_language).text
-    except Exception as e:
-        return jsonify({"status": "Error", "message": f"Translation failed: {str(e)}"})
+    logging.info("before indic call :")
+    # print("before indic call :")
+    translated_text_indic=translate_text_indic(input_text,input_language,output_language)
+    logging.info("after indic call :")
+    # print("after indic call :")
+    if translated_text_indic:
+        translated_text=translated_text_indic
+    else:
+        # Translation
+        translator = Translator()
+        try:
+            if input_language == 'en' and output_language != "en":
+                translated_text = translator.translate(input_text, src='en', dest=output_language).text
+            elif output_language == 'en' and input_language != "en":
+                translated_text = translator.translate(input_text, src=input_language, dest='en').text
+            else:
+                translated_text = translator.translate(input_text, src=input_language, dest=output_language).text
+        except Exception as e:
+            return jsonify({"status": "Error", "message": f"Translation failed: {str(e)}"})
+
 
     # Generate unique filename for the translated audio
     translated_audio_folder_path = os.path.join(PROJECT_HOME_PATH, 'static')
     translated_audio_file_name = f"{uuid.uuid4().hex}.mp3"
     translated_audio_file_path = os.path.join(translated_audio_folder_path, translated_audio_file_name)
 
-    print("Translated text is :",translated_text)
+    logging.info("Translated text is :",translated_text)
+    # print("Translated text is :",translated_text)
     # Text-to-Speech (TTS)
     tts = gTTS(translated_text, lang=output_language)
     tts.save(translated_audio_file_path)

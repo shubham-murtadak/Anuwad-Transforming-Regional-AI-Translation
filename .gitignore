@@ -4,4 +4,4 @@ node_modules/
 
 dist/
 IndicTransTokenizer.egg-info
-IndicTransTokenizer/__pycache__/
+__pycache__/

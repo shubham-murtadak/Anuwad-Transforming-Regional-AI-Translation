@@ -1,0 +1,53 @@
+[ 2024-12-26 12:58:06,583 ]  Module: log.py | Function: <module> | Line No: 23 -  INFO: Logging started!
+[ 2024-12-26 12:58:06,586 ]  Module: connectionpool.py | Function: _new_conn | Line No: 1049 -  DEBUG: Starting new HTTPS connection (1): huggingface.co:443
+[ 2024-12-26 12:58:07,228 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://huggingface.co:443 "HEAD /ai4bharat/indictrans2-en-indic-dist-200M/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+[ 2024-12-26 12:58:07,898 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://huggingface.co:443 "HEAD /ai4bharat/indictrans2-en-indic-dist-200M/resolve/main/tokenization_indictrans.py HTTP/1.1" 200 0
+[ 2024-12-26 12:58:08,344 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://huggingface.co:443 "HEAD /ai4bharat/indictrans2-en-indic-dist-200M/resolve/main/config.json HTTP/1.1" 200 0
+[ 2024-12-26 12:58:08,943 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://huggingface.co:443 "HEAD /ai4bharat/indictrans2-en-indic-dist-200M/resolve/main/configuration_indictrans.py HTTP/1.1" 200 0
+[ 2024-12-26 12:58:09,200 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://huggingface.co:443 "HEAD /ai4bharat/indictrans2-en-indic-dist-200M/resolve/main/modeling_indictrans.py HTTP/1.1" 200 0
+[ 2024-12-26 12:58:09,811 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://huggingface.co:443 "HEAD /ai4bharat/indictrans2-en-indic-dist-200M/resolve/main/generation_config.json HTTP/1.1" 200 0
+[ 2024-12-26 12:58:09,830 ]  Module: _internal.py | Function: _log | Line No: 97 -  WARNING:  * Debugger is active!
+[ 2024-12-26 12:58:09,834 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO:  * Debugger PIN: 742-645-872
+[ 2024-12-26 12:58:31,999 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:31] "OPTIONS /stop_recording HTTP/1.1" 200 -
+[ 2024-12-26 12:58:32,256 ]  Module: app.py | Function: stop_recording | Line No: 83 -  INFO: inside stop recording function !!
+[ 2024-12-26 12:58:32,257 ]  Module: app.py | Function: stop_recording | Line No: 85 -  INFO: Request JSON data:
+[ 2024-12-26 12:58:32,258 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:32] "POST /stop_recording HTTP/1.1" 200 -
+[ 2024-12-26 12:58:32,787 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:32] "OPTIONS /start_recording HTTP/1.1" 200 -
+[ 2024-12-26 12:58:33,095 ]  Module: app.py | Function: start_recording | Line No: 54 -  INFO: inside start recording function !!
+[ 2024-12-26 12:58:33,096 ]  Module: app.py | Function: start_recording | Line No: 62 -  INFO: Input Language: kn, Output Language: en
+[ 2024-12-26 12:58:33,096 ]  Module: app.py | Function: start_recording | Line No: 70 -  INFO: Recording start :
+[ 2024-12-26 12:58:33,098 ]  Module: app.py | Function: record_audio | Line No: 39 -  INFO: inside record audio function !!!
+[ 2024-12-26 12:58:33,098 ]  Module: app.py | Function: start_recording | Line No: 74 -  INFO: Recording end !
+[ 2024-12-26 12:58:33,099 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:33] "POST /start_recording HTTP/1.1" 200 -
+[ 2024-12-26 12:58:36,289 ]  Module: app.py | Function: stop_recording | Line No: 83 -  INFO: inside stop recording function !!
+[ 2024-12-26 12:58:36,289 ]  Module: app.py | Function: stop_recording | Line No: 85 -  INFO: Request JSON data:
+[ 2024-12-26 12:58:37,537 ]  Module: app.py | Function: stop_recording | Line No: 137 -  INFO: before indic call :
+[ 2024-12-26 12:58:37,537 ]  Module: indic.py | Function: translate_text_indic | Line No: 24 -  INFO: inside indic translation :
+[ 2024-12-26 12:58:38,264 ]  Module: app.py | Function: stop_recording | Line No: 140 -  INFO: after indic call :
+[ 2024-12-26 12:58:38,276 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: text: \u0cb9\u0cb2\u0ccb \u0ca8\u0ca8\u0ccd\u0ca8 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0cb6\u0cc1\u0cad\u0c82. 
+[ 2024-12-26 12:58:38,280 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: tld: com
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: lang: kn
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: slow: False
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: lang_check: True
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: pre_processor_funcs: [<function tone_marks at 0x000001ABFE63A980>, <function end_of_line at 0x000001ABFE63B7E0>, <function abbreviations at 0x000001ABFE63B740>, <function word_sub at 0x000001ABFE63B920>]
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=\uff1f).|(?<=\uff01).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\[|\u3001|\\)|;|\\\n|…|\uff0c|\u060c|¿|—|\\]|\uff1a|\u2025|\\(|¡|\u3002', re.IGNORECASE) from: [<function tone_marks at 0x000001ABFE63BB00>, <function period_comma at 0x000001ABFE63BBA0>, <function colon at 0x000001ABFE63BC40>, <function other_punctuation at 0x000001ABFE63BCE0>]>
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: __init__ | Line No: 130 -  DEBUG: timeout: None
+[ 2024-12-26 12:58:38,281 ]  Module: lang.py | Function: tts_langs | Line No: 33 -  DEBUG: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: _tokenize | Line No: 173 -  DEBUG: pre-processing: <function tone_marks at 0x000001ABFE63A980>
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: _tokenize | Line No: 173 -  DEBUG: pre-processing: <function end_of_line at 0x000001ABFE63B7E0>
+[ 2024-12-26 12:58:38,281 ]  Module: tts.py | Function: _tokenize | Line No: 173 -  DEBUG: pre-processing: <function abbreviations at 0x000001ABFE63B740>
+[ 2024-12-26 12:58:38,282 ]  Module: tts.py | Function: _tokenize | Line No: 173 -  DEBUG: pre-processing: <function word_sub at 0x000001ABFE63B920>
+[ 2024-12-26 12:58:38,282 ]  Module: tts.py | Function: _prepare_requests | Line No: 208 -  DEBUG: text_parts: ['\u0cb9\u0cb2\u0ccb \u0ca8\u0ca8\u0ccd\u0ca8 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0cb6\u0cc1\u0cad\u0c82.']
+[ 2024-12-26 12:58:38,282 ]  Module: tts.py | Function: _prepare_requests | Line No: 209 -  DEBUG: text_parts: 1
+[ 2024-12-26 12:58:38,282 ]  Module: tts.py | Function: _prepare_requests | Line No: 216 -  DEBUG: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22%5C%5Cu0cb9%5C%5Cu0cb2%5C%5Cu0ccb%20%5C%5Cu0ca8%5C%5Cu0ca8%5C%5Cu0ccd%5C%5Cu0ca8%20%5C%5Cu0cb9%5C%5Cu0cc6%5C%5Cu0cb8%5C%5Cu0cb0%5C%5Cu0cc1%20%5C%5Cu0cb6%5C%5Cu0cc1%5C%5Cu0cad%5C%5Cu0c82.%5C%22%2C%5C%22kn%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+[ 2024-12-26 12:58:38,283 ]  Module: connectionpool.py | Function: _new_conn | Line No: 1049 -  DEBUG: Starting new HTTPS connection (1): translate.google.com:443
+[ 2024-12-26 12:58:38,684 ]  Module: connectionpool.py | Function: _make_request | Line No: 544 -  DEBUG: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+[ 2024-12-26 12:58:38,741 ]  Module: tts.py | Function: stream | Line No: 275 -  DEBUG: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '316'}
+[ 2024-12-26 12:58:38,742 ]  Module: tts.py | Function: stream | Line No: 276 -  DEBUG: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+[ 2024-12-26 12:58:38,742 ]  Module: tts.py | Function: stream | Line No: 277 -  DEBUG: status-0: 200
+[ 2024-12-26 12:58:38,743 ]  Module: tts.py | Function: write_to_fp | Line No: 318 -  DEBUG: part-0 written to <_io.BufferedWriter name='D:/personal/Personal_Projects/Anuwad-3/Backend\\static\\fd4932ec4b364fa397d92ddc34dddc8c.mp3'>
+[ 2024-12-26 12:58:38,743 ]  Module: tts.py | Function: stream | Line No: 301 -  DEBUG: part-0 created
+[ 2024-12-26 12:58:38,744 ]  Module: tts.py | Function: save | Line No: 337 -  DEBUG: Saved to D:/personal/Personal_Projects/Anuwad-3/Backend\static\fd4932ec4b364fa397d92ddc34dddc8c.mp3
+[ 2024-12-26 12:58:38,748 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:38] "POST /stop_recording HTTP/1.1" 200 -
+[ 2024-12-26 12:58:44,713 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:44] "[35m[1mGET /static/fd4932ec4b364fa397d92ddc34dddc8c.mp3 HTTP/1.1[0m" 206 -
+[ 2024-12-26 12:58:48,103 ]  Module: _internal.py | Function: _log | Line No: 97 -  INFO: 127.0.0.1 - - [26/Dec/2024 12:58:48] "[35m[1mGET /static/e9491dfd38ec4d5d9e6647d5302c86b1.wav HTTP/1.1[0m" 206 -
