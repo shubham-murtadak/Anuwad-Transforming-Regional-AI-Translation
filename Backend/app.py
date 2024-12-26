@@ -45,6 +45,11 @@ def record_audio():
     stream.stop_stream()
     stream.close()
 
+
+@app.route("/")
+def home():
+    return render_template("home.html")
+
 # API endpoint to start recording
 @app.route("/start_recording", methods=["POST"])
 def start_recording():
