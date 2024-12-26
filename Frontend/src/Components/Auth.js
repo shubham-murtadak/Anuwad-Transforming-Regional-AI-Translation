@@ -32,42 +32,42 @@ const Auth = ({ setUser }) => {
 
   return (
     <div className="auth-wrapper">
-      <div className="auth-container">
-        <div className="auth-card">
-          <h2>{isLogin ? 'Login to Your Account' : 'Create an Account'}</h2>
-          <form onSubmit={handleAuth}>
-            <div className="input-group">
-              <label>Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div className="input-group">
-              <label>Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-            <button type="submit" className="auth-button" disabled={loading}>
-              {loading ? 'Processing...' : isLogin ? 'Login' : 'Sign Up'}
-            </button>
-          </form>
-          {error && <p className="error-message">{error}</p>}
-          <p className="toggle-auth">
-            {isLogin ? "Don't have an account?" : 'Already have an account?'}
-            <button className="toggle-button" onClick={() => setIsLogin(!isLogin)}>
-              {isLogin ? ' Sign Up' : ' Login'}
-            </button>
-          </p>
-        </div>
+      <div className="auth-auth-container">
+        <h2>{isLogin ? 'Login to Your Account' : 'Create an Account'}</h2>
+        <form onSubmit={handleAuth}>
+          <div className="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              className="auth-auth-input"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              className="auth-auth-input"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" className="auth-auth-button" disabled={loading}>
+            {loading ? 'Processing...' : isLogin ? 'Login' : 'Sign Up'}
+          </button>
+        </form>
+        {error && <p className="error-message">{error}</p>}
+        <p className="toggle-auth">
+          {isLogin ? "Don't have an account?" : 'Already have an account?'}
+          <button className="toggle-button" onClick={() => setIsLogin(!isLogin)}>
+            {isLogin ? ' Sign Up' : ' Login'}
+          </button>
+        </p>
       </div>
     </div>
   );

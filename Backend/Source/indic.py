@@ -63,7 +63,7 @@ def translate_text_indic(input_text: str, src_lang: str, tgt_lang: str) -> str:
     # Post-process the output
     translated_text = ip.postprocess_batch(outputs, lang=tgt_lang)
 
-    logging.info("translation done by indic is :",translated_text[0])
+    # logging.info("translation done by indic is :",translated_text[0])
 
     # print("translation done by indic is :",translated_text[0])
     

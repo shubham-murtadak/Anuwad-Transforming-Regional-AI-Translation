@@ -15,8 +15,9 @@
     "firebase": "^11.1.0",
     "framer-motion": "3.0.0",
     "howler": "^2.2.4",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1",
     "react-scripts": "^5.0.1",
     "react-voice-recorder": "2.1.2"
   },
