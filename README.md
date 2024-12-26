@@ -117,7 +117,7 @@ Here’s a glimpse of the application interface:
 
 ---
 
-## **Remaining Tasks(get completed tonight)**:
+## **Remaining Tasks**:
 
 1. **Security & Privacy**:
    - Implement data encryption for secure transmission.
