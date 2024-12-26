@@ -120,14 +120,12 @@ Here’s a glimpse of the application interface:
 ---
 
 ## **Remaining Tasks(get completed tonight)**:
-1. **IndicTrans2 Model Integration**:
-   - Full integration of the IndicTrans2 translation model (currently being worked on).
 
-2. **Security & Privacy**:
+1. **Security & Privacy**:
    - Implement data encryption for secure transmission.
    - Ensure no sensitive data storage (currently pending).
 
-3. **Integration of Authentication Pages**:
+2. **Integration of Authentication Pages**:
    - Complete integration Of Authnetication pages with main module remainin( Routing remaining only) 
 
 ---
