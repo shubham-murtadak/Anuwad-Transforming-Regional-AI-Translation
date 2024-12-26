@@ -124,10 +124,6 @@ Here’s a glimpse of the application interface:
 1. **Security & Privacy**:
    - Implement data encryption for secure transmission.
    - Ensure no sensitive data storage (currently pending).
-
-2. **Integration of Authentication Pages**:
-   - Complete integration Of Authnetication pages with main module remainin( Routing remaining only) 
-
 ---
 
 
