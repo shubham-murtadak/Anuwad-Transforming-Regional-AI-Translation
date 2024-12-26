@@ -96,7 +96,6 @@ Here’s a glimpse of the application interface:
 
 3. **Text-to-Speech (TTS)**:
    - Converts translated text to speech using Google TTS.
-   - Multiple voice options for natural output.
 
 4. **Bidirectional Communication**:
    - Users can communicate in both languages (mentor & user).
@@ -104,7 +103,6 @@ Here’s a glimpse of the application interface:
 
 5. **Language Selection**:
    - Language selection dropdown for users to choose their preferred language.
-   - Automatic language detection feature enabled.
 
 6. **User Interface (UI)**:
    - Simple, intuitive interface with visual cues for real-time translation and speech status.
