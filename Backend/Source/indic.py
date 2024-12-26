@@ -10,16 +10,20 @@ model = AutoModelForSeq2SeqLM.from_pretrained("ai4bharat/indictrans2-en-indic-di
 
 def translate_text_indic(input_text: str, src_lang: str, tgt_lang: str) -> str:
     """
-    Translates text from a source language to a target language.
-    
-    Args:
-        input_text (str): Text to be translated.
-        src_lang (str): Source language code (e.g., 'eng_Latn').
-        tgt_lang (str): Target language code (e.g., 'hin_Deva').
-        
-    Returns:
-        str: Translated text.
+    * method: translate_text
+    * description: Translates text from a source language to a target language.
+    * return: Translated text as a string.
+
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M      26-DEC-2024        2.0      updated indic models
+
+    * Parameters
+    *   input_text (str): Text to be translated.
+    *   src_lang (str): Source language code (e.g., 'eng_Latn').
+    *   tgt_lang (str): Target language code (e.g., 'hin_Deva').
     """
+
 
     logging.info("inside indic translation :")
     # print("inside indic translation :")

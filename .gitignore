@@ -5,3 +5,4 @@ node_modules/
 dist/
 IndicTransTokenizer.egg-info
 __pycache__/
+.env.local
