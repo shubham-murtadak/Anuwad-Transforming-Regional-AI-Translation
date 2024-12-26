@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+IndicTransToolkit/__init__.py
+IndicTransToolkit/collator.py
+IndicTransToolkit/evaluator.py
+IndicTransToolkit/processor.py
+IndicTransToolkit/version.py
+IndicTransToolkit.egg-info/PKG-INFO
+IndicTransToolkit.egg-info/SOURCES.txt
+IndicTransToolkit.egg-info/dependency_links.txt
+IndicTransToolkit.egg-info/requires.txt
+IndicTransToolkit.egg-info/top_level.txt
