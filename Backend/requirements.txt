@@ -2,7 +2,7 @@ Flask
 googletrans==4.0.0-rc1
 gTTS
 SpeechRecognition
-pyaudio
+sounddevice
 indic-nlp-library
 flask-cors==5.0.0
 python-dotenv==1.0.1
