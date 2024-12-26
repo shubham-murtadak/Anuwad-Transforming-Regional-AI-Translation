@@ -1,15 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "app.py",   // Update this path to point directly to app.py
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/app.py"  // Update this to point directly to app.py
-    }
-  ]
+  "builds": [{"src":"app.py", "use": "@vercel/python" }],
+  "routes": [{"src":"/(.*)", "dest": "app.py" }]
 }
