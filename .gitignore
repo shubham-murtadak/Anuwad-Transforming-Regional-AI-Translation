@@ -1,2 +1,7 @@
 Anuwadenv/
 node_modules/
+.env
+
+dist/
+IndicTransTokenizer.egg-info
+IndicTransTokenizer/__pycache__/
