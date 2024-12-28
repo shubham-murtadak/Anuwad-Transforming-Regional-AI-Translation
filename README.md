@@ -126,7 +126,7 @@ Here’s a glimpse of the application interface:
 
 2. **Teacher-Student Module Integration:**
    - Develop a **teacher login portal**.
-   - Enable **audio uploads** for lessons.
+   - Enable **video uploads** for lessons.
    - Build a **student interface** to access lessons in their native language.
 
 ---
