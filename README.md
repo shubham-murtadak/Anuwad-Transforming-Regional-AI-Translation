@@ -128,6 +128,9 @@ Here’s a glimpse of the application interface:
    - Develop a **teacher login portal**.
    - Enable **video uploads** for lessons.
    - Build a **student interface** to access lessons in their native language.
+  
+3. **Deployment on Cloud:**
+   - Deploy web application on Vercel Cloud Platform**.
 
 ---
 
